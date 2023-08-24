@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class books
+Partial Public Class issueList
     
     '''<summary>
     '''GridView1 control.

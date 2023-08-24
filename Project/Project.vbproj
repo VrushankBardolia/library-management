@@ -224,6 +224,12 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="adminLogin.aspx" />
+    <Content Include="App_Data\library.mdf" />
+    <Content Include="App_Data\library_log.ldf">
+      <DependentUpon>library.mdf</DependentUpon>
+    </Content>
+    <Content Include="bookList.aspx" />
     <Content Include="books.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -238,8 +244,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="handleBooks.aspx" />
     <Content Include="home.aspx" />
+    <Content Include="img\back.png" />
     <Content Include="img\bg.jpg" />
+    <Content Include="issueBook.aspx" />
+    <Content Include="issueList.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -399,6 +409,13 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="adminLogin.aspx.designer.vb">
+      <DependentUpon>adminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminLogin.aspx.vb">
+      <DependentUpon>adminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\IdentityConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
@@ -410,6 +427,13 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="App_Start\Startup.Auth.vb" />
+    <Compile Include="bookList.aspx.designer.vb">
+      <DependentUpon>bookList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bookList.aspx.vb">
+      <DependentUpon>bookList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="books.aspx.designer.vb">
       <DependentUpon>books.aspx</DependentUpon>
     </Compile>
@@ -434,11 +458,32 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="handleBooks.aspx.designer.vb">
+      <DependentUpon>handleBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handleBooks.aspx.vb">
+      <DependentUpon>handleBooks.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="home.aspx.designer.vb">
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.vb">
       <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="issueBook.aspx.designer.vb">
+      <DependentUpon>issueBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="issueBook.aspx.vb">
+      <DependentUpon>issueBook.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="issueList.aspx.designer.vb">
+      <DependentUpon>issueList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="issueList.aspx.vb">
+      <DependentUpon>issueList.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Models\IdentityModels.vb" />
@@ -506,9 +551,7 @@
     <Content Include="Site.Mobile.Master" />
     <Content Include="ViewSwitcher.ascx" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

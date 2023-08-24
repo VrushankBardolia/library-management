@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="home.aspx.vb" Inherits="Project.home" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Liberty Library</title>
@@ -14,7 +12,7 @@
             padding-left:150px;
             padding-right:150px;
             display:flex;
-            background-color:#f5f5f5;
+            background-color:#e2e8f0;
         }
         h3{
             margin-right:250px;
@@ -40,25 +38,19 @@
             padding: 14px 16px;
             text-decoration: none;
         }
-        li a:hover:not(.active){
-            font-weight:600;
-        }
+        li a:hover:not(.active){font-weight:600}
         .active {
             font-weight:600;
             border-bottom:2px solid black;
         }
-        #admin{
-            margin-left:100px;
-        }
+        #admin{margin-left:100px}
         .container{
             width:75%;
             height:80%;
             margin-left:auto;
             margin-right:auto;
         }
-        .container img{
-            width:100%;
-        }
+        .container img{width:100%}
         .container h1{
             position: absolute;
             top: 50%;
@@ -75,8 +67,8 @@
         <ul>
             <li><a class="active">Home</a></li>
             <li><a href="books.aspx">Books</a></li>
-            <li><a href="#">Issue book</a></li>
-            <li><a href="#" id="admin">Admin</a></li>
+            <li><a href="issueBook.aspx">Issue book</a></li>
+            <li><a href="adminLogin.aspx" id="admin">Admin</a></li>
         </ul>
     </div>
 
