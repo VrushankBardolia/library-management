@@ -68,7 +68,7 @@
             font-weight:500;
         }
         .btn-cont{
-            width:200px;
+            width:400px;
             margin-left:auto;
             margin-right:auto;
             height:40px;
@@ -151,20 +151,9 @@
                     </td>
                 </tr>
             </table>
-            <div class="btn-grp">
-                <div class="btn-cont">
-                    <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Insert" type="submit"/>
-                </div>
-                <div class="btn-cont">
-                    <asp:Button ID="btnUpdate" CssClass="btn" runat="server" Text="Update"/>
-                </div>
-                <div class="btn-cont">
-                    <asp:Button ID="btnDelete" CssClass="btn" runat="server" Text="Delete"/>
-                </div>
-                <div class="btn-cont">
-                    <asp:Button ID="btnSearch" CssClass="btn" runat="server" Text="Search"/>
-                </div>
-            </div>
+            <div class="btn-cont">
+                <asp:Button ID="btnInsert" CssClass="btn" runat="server" Text="Insert"/>
+             </div>
         </form>
     </div>
 </body>

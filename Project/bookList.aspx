@@ -72,7 +72,7 @@
         <h2>List of Books</h2>
         <form runat="server">
             <div class="grid-cont">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="12" DataKeyNames="b_id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" GridLines="Horizontal">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="12" DataKeyNames="b_id" DataSourceID="SqlDataSource1" EmptyDataText="There are no Bookes display." ForeColor="Black" GridLines="Horizontal" AllowPaging="True">
                     <Columns>
                         <asp:BoundField DataField="b_id" HeaderText="Book ID" ReadOnly="True" SortExpression="b_id" />
                         <asp:BoundField DataField="book_name" HeaderText="Book Name" SortExpression="book_name" />
@@ -80,6 +80,8 @@
                         <asp:BoundField DataField="auther" HeaderText="Auther" SortExpression="auther" />
                         <asp:BoundField DataField="publisher" HeaderText="Publisher" SortExpression="publisher" />
                         <asp:BoundField DataField="copies" HeaderText="Copies" SortExpression="copies" />
+                        <asp:CommandField HeaderText="Edit" ShowEditButton="True" />
+                        <asp:CommandField HeaderText="Delete" ShowDeleteButton="True" />
                     </Columns>
                     <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                     <HeaderStyle BackColor="#1e293b" Font-Bold="True" ForeColor="White" />
