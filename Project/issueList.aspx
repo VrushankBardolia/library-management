@@ -81,6 +81,7 @@
                     <asp:BoundField DataField="rollno" HeaderText="Roll No." SortExpression="rollno" />
                     <asp:BoundField DataField="book_name" HeaderText="Book Name" SortExpression="book_name" />
                     <asp:BoundField DataField="issue_date" HeaderText="Issue Date" SortExpression="issue_date" DataFormatString="{0:MM/dd/yyyy}"/>
+                    <asp:CommandField HeaderText="Delete Issue" ShowDeleteButton="True" />
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                 <HeaderStyle BackColor="#1e293b" Font-Bold="True" ForeColor="White" />

@@ -4,17 +4,17 @@
 <head runat="server">
     <title>Liberty Library</title>
     <style>
-        body{
+        body {
             font-family: Gotham, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color:#fafafa;
         }
-        .header{
+        .header {
             padding-left:150px;
             padding-right:150px;
             display:flex;
             background-color:#e2e8f0;
         }
-        h3{
+        h3 {
             margin-right:250px;
             margin-left:20px;
             color:black;
@@ -31,14 +31,14 @@
             font-weight:500;
             float: left;
         }
-        li a{
+        li a {
             display: block;
             color: black;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
         }
-        li a:hover:not(.active){font-weight:600}
+        li a:hover { font-weight:600 }
         .active {
             font-weight:600;
             border-bottom:2px solid black;

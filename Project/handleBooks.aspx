@@ -9,17 +9,15 @@
             background-color: #fafafa;
         }
         .header {
-            padding-left: 150px;
-            padding-right: 150px;
+            padding: 0 150px;
             display: flex;
             background-color: #0f172a;
         }
         h3 {
+            margin: auto 0;
             margin-right: 250px;
             margin-left: 20px;
             color: #f8fafc;
-            margin-top: auto;
-            margin-bottom: auto;
         }
         ul {
             list-style-type: none;
