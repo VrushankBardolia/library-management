@@ -4,6 +4,7 @@
 <head runat="server">
     <title>Liberty Library : Admin</title>
     <style>
+        * { margin:0 }
         body {
             font-family: Gotham, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color: #fafafa;
@@ -50,7 +51,10 @@
             margin-right: auto;
             margin-top: 8px;
         }
-        .book-list h2 { text-align: center }
+        .book-list h2 { 
+            text-align: center;
+            margin:20px;
+        }
         #GridView1 {
             margin: 0 auto;
             font-weight:600;
@@ -72,7 +76,8 @@
         <h2>List of Books</h2>
         <form runat="server">
             <div class="grid-cont">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="12" DataKeyNames="b_id" DataSourceID="SqlDataSource1" EmptyDataText="There are no Bookes display." ForeColor="Black" GridLines="Horizontal" AllowPaging="True">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="2px" 
+                    CellPadding="12" DataKeyNames="b_id" DataSourceID="SqlDataSource1" EmptyDataText="There are no Bookes." ForeColor="Black" GridLines="Horizontal" AllowPaging="True">
                     <Columns>
                         <asp:BoundField DataField="b_id" HeaderText="Book ID" ReadOnly="True" SortExpression="b_id" />
                         <asp:BoundField DataField="book_name" HeaderText="Book Name" SortExpression="book_name" />
@@ -85,14 +90,20 @@
                     </Columns>
                     <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                     <HeaderStyle BackColor="#1e293b" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                    <PagerStyle BackColor="#1e293b" ForeColor="White" HorizontalAlign="Right" />
                     <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
                     <SortedAscendingCellStyle BackColor="#F7F7F7" />
                     <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
                     <SortedDescendingCellStyle BackColor="#E5E5E5" />
                     <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:libraryConnectionString1 %>" DeleteCommand="DELETE FROM [books] WHERE [b_id] = @b_id" InsertCommand="INSERT INTO [books] ([book_name], [pages], [auther], [publisher], [copies]) VALUES (@book_name, @pages, @auther, @publisher, @copies)" ProviderName="<%$ ConnectionStrings:libraryConnectionString1.ProviderName %>" SelectCommand="SELECT [b_id], [book_name], [pages], [auther], [publisher], [copies] FROM [books]" UpdateCommand="UPDATE [books] SET [book_name] = @book_name, [pages] = @pages, [auther] = @auther, [publisher] = @publisher, [copies] = @copies WHERE [b_id] = @b_id">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:libraryConnectionString1 %>" 
+                    ProviderName="<%$ ConnectionStrings:libraryConnectionString1.ProviderName %>" 
+                    DeleteCommand="DELETE FROM [books] WHERE [b_id] = @b_id" 
+                    InsertCommand="INSERT INTO [books] ([book_name], [pages], [auther], [publisher], [copies]) VALUES (@book_name, @pages, @auther, @publisher, @copies)" 
+                    SelectCommand="SELECT [b_id], [book_name], [pages], [auther], [publisher], [copies] FROM [books]" 
+                    UpdateCommand="UPDATE [books] SET [book_name] = @book_name, [pages] = @pages, [auther] = @auther, [publisher] = @publisher, [copies] = @copies WHERE [b_id] = @b_id">
                     <DeleteParameters>
                         <asp:Parameter Name="b_id" Type="Int32" />
                     </DeleteParameters>

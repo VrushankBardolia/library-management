@@ -4,6 +4,7 @@
 <head runat="server">
     <title>Liberty Library : Admin</title>
     <style>
+        * { margin:0 }
         body {
             font-family: Gotham, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color: #fafafa;
@@ -41,14 +42,17 @@
             font-weight: 600;
             border-bottom: 2px solid #f8fafc;
         }
-        #students{ margin-left:150px }
-        .form-container{
+        #students { margin-left:150px }
+        .form-container {
             width:800px;
             margin-left:auto;
             margin-right:auto;
             margin-top:20px;
         }
-        h2 { text-align: center }
+        h2 { 
+            text-align: center;
+            margin:20px;
+        }
         .form-table { margin:0 auto }
         .row { height:50px }
         .label-f { width:130px }
@@ -84,7 +88,6 @@
             border-radius:8px;
         }
         .btn:hover { background-color:#1e293b }
-        .btn-grp { display: flex }
     </style>
 </head>
 
@@ -100,7 +103,7 @@
     </div>
 
     <div class="form-container">
-        <h2>Fill the form to issue the Book</h2>
+        <h2>Enter details of Book</h2>
         <form id="form1" runat="server">
             <table class="form-table">
                 <tr class="row">

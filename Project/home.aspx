@@ -4,6 +4,7 @@
 <head runat="server">
     <title>Liberty Library</title>
     <style>
+        * { margin:0 }
         body {
             font-family: Gotham, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color:#fafafa;

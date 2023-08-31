@@ -4,6 +4,7 @@
 <head runat="server">
     <title>Liberty Library : Admin</title>
     <style>
+        * { margin:0 }
         body {
             font-family: Gotham, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color: #fafafa;
@@ -50,7 +51,10 @@
             margin-right: auto;
             margin-top: 8px;
         }
-        .issue-list h2 { text-align: center }
+        .issue-list h2 { 
+            text-align: center;
+            margin:20px;
+        }
         #GridView1 {
             margin: 0 auto;
             font-weight:600;
@@ -72,7 +76,8 @@
     <div class="issue-list">
         <h2>List of Issues</h2>
         <form runat="server">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="12" DataKeyNames="i_id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" GridLines="Horizontal" AllowPaging="True">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
+                CellPadding="12" DataKeyNames="i_id" DataSourceID="SqlDataSource1" EmptyDataText="There are no Issue for books." ForeColor="Black" GridLines="Horizontal" AllowPaging="True">
                 <Columns>
                     <asp:BoundField DataField="i_id" HeaderText="Issue ID" ReadOnly="True" SortExpression="i_id" />
                     <asp:BoundField DataField="fname" HeaderText="Full Name" SortExpression="fname" />
@@ -80,19 +85,25 @@
                     <asp:BoundField DataField="division" HeaderText="Division" SortExpression="division" />
                     <asp:BoundField DataField="rollno" HeaderText="Roll No." SortExpression="rollno" />
                     <asp:BoundField DataField="book_name" HeaderText="Book Name" SortExpression="book_name" />
-                    <asp:BoundField DataField="issue_date" HeaderText="Issue Date" SortExpression="issue_date" DataFormatString="{0:MM/dd/yyyy}"/>
+                    <asp:BoundField DataField="issue_date" HeaderText="Issue Date" SortExpression="issue_date" DataFormatString="{0:dd/MM/yyyy}"/>
                     <asp:CommandField HeaderText="Delete Issue" ShowDeleteButton="True" />
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                 <HeaderStyle BackColor="#1e293b" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                <PagerStyle BackColor="#1e293b" ForeColor="White" HorizontalAlign="Right" />
                 <SelectedRowStyle BackColor="#e2e8f0" Font-Bold="True" ForeColor="White" />
                 <SortedAscendingCellStyle BackColor="#F7F7F7" />
                 <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:libraryConnectionString1 %>" DeleteCommand="DELETE FROM [issuebook] WHERE [i_id] = @i_id" InsertCommand="INSERT INTO [issuebook] ([fname], [standard], [division], [rollno], [book_name], [issue_date]) VALUES (@fname, @standard, @division, @rollno, @book_name, @issue_date)" ProviderName="<%$ ConnectionStrings:libraryConnectionString1.ProviderName %>" SelectCommand="SELECT [i_id], [fname], [standard], [division], [rollno], [book_name], [issue_date] FROM [issuebook]" UpdateCommand="UPDATE [issuebook] SET [fname] = @fname, [standard] = @standard, [division] = @division, [rollno] = @rollno, [book_name] = @book_name, [issue_date] = @issue_date WHERE [i_id] = @i_id">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:libraryConnectionString1 %>" 
+                ProviderName="<%$ ConnectionStrings:libraryConnectionString1.ProviderName %>" 
+                DeleteCommand="DELETE FROM [issuebook] WHERE [i_id] = @i_id" 
+                InsertCommand="INSERT INTO [issuebook] ([fname], [standard], [division], [rollno], [book_name], [issue_date]) VALUES (@fname, @standard, @division, @rollno, @book_name, @issue_date)" 
+                SelectCommand="SELECT [i_id], [fname], [standard], [division], [rollno], [book_name], [issue_date] FROM [issuebook]" 
+                UpdateCommand="UPDATE [issuebook] SET [fname] = @fname, [standard] = @standard, [division] = @division, [rollno] = @rollno, [book_name] = @book_name, [issue_date] = @issue_date WHERE [i_id] = @i_id">
                 <DeleteParameters>
                     <asp:Parameter Name="i_id" Type="Int32" />
                 </DeleteParameters>
