@@ -101,7 +101,6 @@
             <li><a href="home.aspx" id="students">Go to Students Side</a></li>
         </ul>
     </div>
-
     <div class="form-container">
         <h2>Enter details of Book</h2>
         <form id="form1" runat="server">

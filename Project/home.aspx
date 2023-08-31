@@ -61,8 +61,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Header -->
     <div class="header">
         <h3>Liberty Library</h3>
         <ul>
@@ -72,8 +70,6 @@
             <li><a href="adminLogin.aspx" id="admin">Admin</a></li>
         </ul>
     </div>
-
-    <!-- Text On Image -->
     <div class="container">
         <img src="img/bg.jpg" />
         <h1>Empowering Curiosity, Enriching Minds.</h1>

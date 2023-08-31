@@ -66,7 +66,6 @@
 </head>
 
 <body>
-    <!-- Header -->
     <div class="header">
         <h3>Liberty Library</h3>
         <ul>
@@ -80,7 +79,8 @@
     <div class="book-list">
         <h2>List of Books</h2>
         <form runat="server">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="12" DataKeyNames="b_id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" GridLines="Horizontal" Width="791px">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
+                CellPadding="12" DataKeyNames="b_id" DataSourceID="SqlDataSource1" EmptyDataText="There are no Books." ForeColor="Black" GridLines="Horizontal" Width="791px">
                 <Columns>
                     <asp:BoundField DataField="b_id" HeaderText="Book ID" ReadOnly="True" SortExpression="b_id" />
                     <asp:BoundField DataField="book_name" HeaderText="Book Name" SortExpression="book_name" />
@@ -98,7 +98,12 @@
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:libraryConnectionString1 %>" DeleteCommand="DELETE FROM [books] WHERE [b_id] = @b_id" InsertCommand="INSERT INTO [books] ([book_name], [pages], [auther], [publisher], [copies]) VALUES (@book_name, @pages, @auther, @publisher, @copies)" SelectCommand="SELECT [b_id], [book_name], [pages], [auther], [publisher], [copies] FROM [books]" UpdateCommand="UPDATE [books] SET [book_name] = @book_name, [pages] = @pages, [auther] = @auther, [publisher] = @publisher, [copies] = @copies WHERE [b_id] = @b_id">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:libraryConnectionString1 %>" 
+                DeleteCommand="DELETE FROM [books] WHERE [b_id] = @b_id" 
+                InsertCommand="INSERT INTO [books] ([book_name], [pages], [auther], [publisher], [copies]) VALUES (@book_name, @pages, @auther, @publisher, @copies)" 
+                SelectCommand="SELECT [b_id], [book_name], [pages], [auther], [publisher], [copies] FROM [books]" 
+                UpdateCommand="UPDATE [books] SET [book_name] = @book_name, [pages] = @pages, [auther] = @auther, [publisher] = @publisher, [copies] = @copies WHERE [b_id] = @b_id">
                 <DeleteParameters>
                     <asp:Parameter Name="b_id" Type="Int32" />
                 </DeleteParameters>

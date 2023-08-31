@@ -71,8 +71,8 @@
             color:#dc2626;
             font-size:larger;
             font-weight:500;
-            text-align: center; /* Center-align the text */
-    display: block;
+            text-align: center;
+            display: block;
         }
         #btnBack{
             width:100%;
@@ -91,16 +91,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <!-- Header -->
         <div class="header">
             <h1>Liberty Library</h1>
         </div>
-
-        <!-- Main Container -->
         <div class="container">
             <h2>Admin Login</h2>
             <div class="form-cont">
-                
                 <table class="form-table">
                     <tr class="row">
                         <td class="label-f"><b>Username</b></td>
