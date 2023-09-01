@@ -3,7 +3,7 @@
 This Project is made by Vrushank Bardolia. 
 ======================================================
 
-Project title: Library Management System
-Project Platform : ASP.NET
-Project Code : Visual Basics
-Database : Microsoft SQL Server
+Project title: Library Management System <br>
+Project Platform : ASP.NET <br>
+Project Code : Visual Basics <br>
+Database : Microsoft SQL Server <br>
