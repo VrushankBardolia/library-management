@@ -1,7 +1,7 @@
 # library-management
 
 This Project is made by Vrushank Bardolia. 
-======================================================
+---
 <ul>
   <li>Project title: Library Management System</li>
   <li>Project Platform : ASP.NET</li>
